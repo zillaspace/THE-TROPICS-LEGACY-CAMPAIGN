@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Tropics Legacy Campaign</title>
+<meta name="description" content="A tiki themed legacy campaign concept for The Tropics in Palm Springs">
+<style>
+:root{
+  --night:#100806; --deep:#1b0d08; --wood:#3a1b0f; --bark:#5b2b18; --lava:#d4572a; --gold:#e9ad3d; --sun:#ffd66e; --cream:#fff1ca; --palm:#244d32; --teal:#11636b; --shadow:rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 20% 0%,#6f2d19 0,#271109 34%,#0b0504 72%);color:var(--cream);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+a{color:#ffe08a;text-decoration:none;border-bottom:1px dotted rgba(255,224,138,.6)}
+.wrap{width:min(1220px,92vw);margin:auto}
+.hero{min-height:100vh;position:relative;overflow:hidden;background:linear-gradient(115deg,rgba(0,0,0,.88),rgba(0,0,0,.42) 40%,rgba(0,0,0,.1)),url('assets/tiki%20statue%20and%20torches.png') center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,166,67,.28),transparent 24%),linear-gradient(180deg,transparent 70%,#0b0504 100%)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:repeating-linear-gradient(90deg,#271109 0 28px,#e9ad3d 28px 36px,#5b2b18 36px 64px,#244d32 64px 92px);clip-path:polygon(0 45%,100% 0,100% 100%,0 100%)}
+.nav{position:relative;z-index:2;padding:22px 0;display:flex;justify-content:space-between;align-items:center;font:800 12px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.nav span{background:rgba(0,0,0,.45);border:1px solid rgba(255,214,110,.35);padding:10px 14px;border-radius:999px}
+.heroInner{position:relative;z-index:2;padding:88px 0 170px}
+.kicker{display:inline-block;background:rgba(233,173,61,.18);border:1px solid rgba(233,173,61,.7);padding:10px 16px;border-radius:999px;font:900 12px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+h1{font-size:clamp(52px,9vw,132px);line-height:.82;margin:28px 0 16px;text-shadow:0 14px 34px #000}
+.subtitle{font-size:clamp(26px,4vw,54px);color:var(--sun);margin:0 0 20px;line-height:1}
+.heroText{font-size:23px;max-width:860px;background:rgba(0,0,0,.32);padding:24px;border-radius:28px;border:1px solid rgba(255,214,110,.28)}
+.buttonRow{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;padding:14px 19px;border-radius:999px;background:var(--gold);color:#1d0d07;font:900 13px Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;box-shadow:0 12px 24px var(--shadow);border:0}
+.btn.alt{background:rgba(0,0,0,.42);color:var(--cream);border:1px solid rgba(255,214,110,.42)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
+.stat{background:rgba(0,0,0,.58);border:1px solid rgba(255,214,110,.32);border-radius:24px;padding:20px;backdrop-filter:blur(8px)}
+.stat b{display:block;color:var(--sun);font-size:30px;line-height:1.1}
+.stat span{font:800 12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#f6d89c}
+section{padding:82px 0}
+.sectionTitle{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:end;margin-bottom:28px}
+h2{font-size:clamp(38px,5.4vw,72px);line-height:.92;margin:0;color:var(--sun);text-shadow:0 8px 24px #000}
+h3{font-size:28px;color:#ffe3a0;margin:0 0 12px}
+p{margin:0 0 16px}
+.lead{font-size:22px;color:#ffe9b7}
+.card{background:linear-gradient(180deg,rgba(255,241,202,.12),rgba(255,241,202,.045));border:1px solid rgba(255,214,110,.28);border-radius:34px;padding:30px;box-shadow:0 22px 55px var(--shadow)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.photoWall{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-auto-rows:260px;gap:16px}
+.photoCard{position:relative;margin:0;overflow:hidden;border-radius:30px;background:#211006;border:2px solid rgba(233,173,61,.7);box-shadow:0 20px 35px var(--shadow)}
+.photoCard:first-child{grid-row:span 2}
+.photoCard img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.08) contrast(1.04)}
+.photoCard:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(0,0,0,.82))}
+.photoCard figcaption{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;font:900 14px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#ffe4a2}
+.ribbon{height:34px;background:repeating-linear-gradient(90deg,#d4572a 0 24px,#ffd66e 24px 34px,#244d32 34px 58px,#11636b 58px 82px);border-radius:999px;margin:28px 0}
+.tikiGrid{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin:20px 0}
+.miniTiki{display:grid;place-items:center;height:54px;border-radius:16px;background:linear-gradient(#73401f,#2c130b);border:1px solid rgba(255,214,110,.42);color:#ffd66e;font-size:22px;box-shadow:inset 0 0 18px rgba(0,0,0,.4)}
+.badge{display:inline-block;background:#173f2c;border:1px solid #e9ad3d;border-radius:14px;padding:8px 12px;margin-bottom:12px;font:900 12px Arial,sans-serif;text-transform:uppercase;letter-spacing:.13em;color:#ffe08a}
+.price{font-size:32px;color:var(--sun);font-weight:900;line-height:1.1}
+.table{width:100%;border-collapse:separate;border-spacing:0 10px}
+.table th{font:900 12px Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;text-align:left;color:#ffdc84}
+.table td,.table th{padding:14px;background:rgba(0,0,0,.34);border-top:1px solid rgba(255,214,110,.18);border-bottom:1px solid rgba(255,214,110,.18)}
+.table td:first-child,.table th:first-child{border-left:1px solid rgba(255,214,110,.18);border-radius:16px 0 0 16px}
+.table td:last-child,.table th:last-child{border-right:1px solid rgba(255,214,110,.18);border-radius:0 16px 16px 0}
+.namingCard{min-height:230px;position:relative;overflow:hidden}
+.namingCard:after{content:"✹";position:absolute;right:16px;bottom:-42px;font-size:130px;color:rgba(255,214,110,.08)}
+.plaqueRow{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
+.plaque{background:linear-gradient(135deg,#b57b2b,#f0c264 45%,#8b5a20);color:#180b05;border:6px double #4a2a0e;border-radius:20px;padding:24px;text-align:center;box-shadow:inset 0 3px 8px rgba(255,255,255,.45),inset 0 -8px 18px rgba(0,0,0,.28),0 18px 30px var(--shadow);font-family:Georgia,serif}
+.plaque .smallCap{font:900 11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.plaque .plaqueName{font-size:30px;line-height:1.05;margin:14px 0;color:#281000}
+.plaque.dark{background:linear-gradient(135deg,#17100b,#6a431c 48%,#140b05);color:#ffe7aa;border-color:#d9a84a}
+.plaque.dark .plaqueName{color:#ffe6a6}
+.source{font:500 14px Arial,sans-serif;color:#ffeabd}
+.source a{margin-right:10px}
+.carver{display:flex;flex-direction:column;gap:8px}
+.carver .role{font:900 12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#ffda84}
+.cocktail{background:radial-gradient(circle at top left,rgba(255,214,110,.25),transparent 32%),linear-gradient(135deg,#742116,#29110b);border:2px solid #e9ad3d}
+.recipe{columns:2;column-gap:36px}
+.footer{padding:56px 0;background:#080403;border-top:8px solid var(--gold);color:#ffe6ad}
+.code{font-family:Consolas,monospace;background:#0e0906;color:#ffe8b2;border:1px solid rgba(233,173,61,.4);padding:18px;border-radius:18px;white-space:pre-wrap;overflow:auto}
+@media(max-width:980px){.sectionTitle,.grid2,.grid3,.grid4,.plaqueRow,.stats{grid-template-columns:1fr}.photoWall{grid-template-columns:1fr;grid-auto-rows:260px}.photoCard:first-child{grid-row:auto}.tikiGrid{grid-template-columns:repeat(5,1fr)}h1{font-size:58px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap nav"><span>The Tropics Legacy Campaign</span><span>Palm Springs</span></div>
+  <div class="wrap heroInner">
+    <span class="kicker">Preserve a Palm Springs Icon</span>
+    <h1>Adopt a Piece of Tropics History</h1>
+    <p class="subtitle">A capital strategy disguised as legacy, art and belonging</p>
+    <p class="heroText">This idea does two powerful things at once. It raises capital without diluting ownership, and it creates emotional ownership among investors, donors, local families and resort guests. The Tropics is not just selling names on rooms. It is offering people a permanent place in the story of one of Palm Springs most recognizable tiki landmarks.</p>
+    <div class="buttonRow"><a class="btn" href="#gallery">View images</a><a class="btn alt" href="#stewards">Historic tikis</a><a class="btn alt" href="#carvers">Carvers</a><a class="btn alt" href="#plaques">Plaques</a></div>
+    <div class="stats">
+      <div class="stat"><b>1964</b><span>Original Tropics era</span></div>
+      <div class="stat"><b>24</b><span>Historic steward opportunities</span></div>
+      <div class="stat"><b>50</b><span>New legacy tiki pillars</span></div>
+      <div class="stat"><b>$1.25M to $2.5M</b><span>Potential pillar revenue</span></div>
+    </div>
+  </div>
+</header>
+<main>
+<section id="gallery" class="wrap">
+  <div class="sectionTitle"><h2>The visual signature</h2><p class="lead">The strongest campaign image is not a wall of donor names. It is a resort landscape filled with tiki guardians, torchlight, bronze plaques and stories that guests photograph for decades.</p></div>
+  <div class="photoWall">
+    <figure class="photoCard"><img src="assets/tiki%20statue%20and%20torches.png" alt="Torch guardian" loading="lazy"><figcaption>Torch guardian</figcaption></figure>
+<figure class="photoCard"><img src="assets/tiki%20statue%20and%20signage.png" alt="Tropics signage" loading="lazy"><figcaption>Tropics signage</figcaption></figure>
+<figure class="photoCard"><img src="assets/tiki%20statue%202.png" alt="Historic tiki detail" loading="lazy"><figcaption>Historic tiki detail</figcaption></figure>
+<figure class="photoCard"><img src="assets/tiki%20statue%203.png" alt="Garden tiki" loading="lazy"><figcaption>Garden tiki</figcaption></figure>
+<figure class="photoCard"><img src="assets/tiki%20statue%204.png" alt="Poolside tiki" loading="lazy"><figcaption>Poolside tiki</figcaption></figure>
+<figure class="photoCard"><img src="assets/tike%20statue%207.png" alt="Legacy tiki" loading="lazy"><figcaption>Legacy tiki</figcaption></figure>
+  </div>
+  <div class="ribbon"></div>
+</section>
+<section class="wrap">
+  <div class="grid2">
+    <div class="card"><span class="badge">The positioning</span><h2>Not a hotel. A living artifact.</h2><p class="lead">The property should be presented as one of Palm Springs remaining authentic Polynesian and tiki landmarks. It has mid century atmosphere, resort nostalgia, tiki culture and the rare quality of already feeling like a story.</p><p>When presenting this to investors, frame it less as a capital campaign and more as <b>Adopt a Piece of Palm Springs History</b>. For a destination hospitality project, <b>Heritage Circle</b> feels more permanent and prestigious than generic giving categories.</p></div>
+    <div class="card"><span class="badge">The big idea</span><h2>Founders of the Village</h2><p class="lead">Commission 50 carved ancestral pillars, also presented as legacy tikis, garden guardians and resort markers.</p><p>At $25,000 to $50,000 per pillar, 50 pillars could generate $1,250,000 to $2,500,000 while becoming a visual signature of the property.</p><div class="tikiGrid"><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span><span class="miniTiki">☻</span></div></div>
+  </div>
+</section>
+<section id="stewards" class="wrap">
+  <div class="sectionTitle"><h2>The original tikis</h2><p class="lead">The existing tikis are not merely decorations. They are historical assets. The best approach is to sell stewardship plaques, not ownership and not renaming.</p></div>
+  <div class="card">
+    <table class="table"><tr><th>Steward tier</th><th>Quantity</th><th>Gift level</th><th>Revenue</th></tr><tr><td>Landmark Tikis</td><td>4</td><td>$100,000</td><td>$400,000</td></tr><tr><td>Heritage Tikis</td><td>10</td><td>$50,000</td><td>$500,000</td></tr><tr><td>Founders Tikis</td><td>10</td><td>$25,000</td><td>$250,000</td></tr><tr><td><b>Total steward program</b></td><td><b>24</b></td><td></td><td><b>$1,150,000</b></td></tr></table>
+    <p>Each steward receives a permanent bronze plaque, story placement on the website, grand opening recognition and an annual heritage event invitation. The plaque should read <b>preserved by</b> or <b>stewarded by</b> so the historic identity remains intact.</p>
+    <h3>Strategic value of the collection</h3>
+    <table class="table"><tr><th>Asset type</th><th>Estimated object value</th></tr><tr><td>Smaller original tiki</td><td>$15,000 to $40,000</td></tr><tr><td>Average original tiki</td><td>$25,000 to $75,000</td></tr><tr><td>Major iconic entrance tiki</td><td>$75,000 to $250,000 plus</td></tr><tr><td>All originals separately</td><td>$1,000,000 to $2,000,000 aggregate</td></tr><tr><td>Full historic ensemble</td><td>$2,000,000 to $5,000,000 plus</td></tr></table>
+    <p class="source">Strategic estimate only. A formal appraisal would be required before using these figures in legal offering materials.</p>
+  </div>
+</section>
+<section class="wrap">
+  <div class="sectionTitle"><h2>Premier naming rights</h2><p class="lead">Put the largest donor names on places that guests actually use, photograph and remember.</p></div>
+  <div class="grid4">
+    <div class="card namingCard"><span class="badge">$500,000 plus</span><h3>Presidential Suite</h3><p>The Gunilla Presidential Suite or another lead family name.</p></div>
+    <div class="card namingCard"><span class="badge">$500,000 plus</span><h3>Main Bar</h3><p>The Raymond Johnston Club or RJ Bar.</p></div>
+    <div class="card namingCard"><span class="badge">$500,000 plus</span><h3>Pool Complex</h3><p>The central social heart of the resort.</p></div>
+    <div class="card namingCard"><span class="badge">$500,000 plus</span><h3>Event Pavilion</h3><p>A high visibility hospitality and private event asset.</p></div>
+    <div class="card namingCard"><span class="badge">$250,000 plus</span><h3>Arrival Courtyard</h3><p>The first emotional moment on property.</p></div>
+    <div class="card namingCard"><span class="badge">$250,000 plus</span><h3>Palapa Garden</h3><p>Doug’s Palapa Garden or a family garden name.</p></div>
+    <div class="card namingCard"><span class="badge">$250,000 plus</span><h3>Wellness Garden</h3><p>Ideal for a donor known in health, fitness or longevity.</p></div>
+    <div class="card namingCard"><span class="badge">$100,000 plus</span><h3>Chef’s Table</h3><p>A culinary naming right with repeat guest visibility.</p></div>
+  </div>
+  <div class="card" style="margin-top:22px"><h3>Additional naming inventory</h3><p>Sunset Deck, Wine Cellar, Library, Private Dining Room, Boardroom, Beach Club Cabanas, Signature Fire Pit Areas, Palapas, Garden Benches and Memorial Trees.</p></div>
+</section>
+<section class="wrap">
+  <div class="grid2">
+    <div class="card"><span class="badge">Membership society</span><h2>1964 Founders Wall</h2><p class="lead">Since the resort belongs to the 1964 Tropics story, create a limited 1964 Founders Society.</p><table class="table"><tr><th>Membership</th><th>Quantity</th><th>Gift</th></tr><tr><td>Premier Founders</td><td>10</td><td>$250,000</td></tr><tr><td>Heritage Founders</td><td>25</td><td>$100,000</td></tr><tr><td>Village Founders</td><td>100</td><td>$25,000</td></tr></table><p>Benefits may include permanent recognition wall, VIP annual party, priority reservations, special room rates and early event access.</p></div>
+    <div class="card"><span class="badge">Wellness strategy</span><h2>Wellness Legacy District</h2><p class="lead">This can attract donors outside traditional hotel investors.</p><p>Example: <b>The Dr. Jane Smith Wellness Institute</b> with treatment rooms, yoga deck, nutrition programming and lecture series. The donor is not simply funding a hotel. They are funding a legacy connected to their life’s work.</p><p>This model can also target architecture, preservation, sustainability, hospitality, culinary arts and film culture.</p></div>
+  </div>
+</section>
+<section id="carvers" class="wrap">
+  <div class="sectionTitle"><h2>Where to make 50 authentic tikis</h2><p class="lead">Use three sourcing lanes: United States master provenance for the most important pieces, Fiji for story and cultural resonance, and Bali or Java for scalable resort volume.</p></div>
+  <div class="grid3">
+    <div class="card carver"><span class="badge">Option one</span><h3>United States master carvers</h3><p class="role">Best for provenance</p><p><b>Bosko Hrnjak</b> is associated with the modern rebirth of tiki as sculpture and is centered in Southern California.</p><p><b>Crazy Al Evans</b> is a Southern California tiki artist and founder of TIKIMANIA.</p><p><b>Mike Gecko Souirielle</b> is a Hawaii based artist producing tiki mugs and carvings through Gecko’z South Sea Arts.</p><p><b>John Mulder</b> of Eekum Bookum is better suited for donor mugs, plaques and commemorative objects than monumental outdoor carvings.</p><p class="price">$3,000 to $75,000 plus</p><p class="source"><a href="https://www.tikibosko.com/">Bosko</a><a href="https://tikimania.com/">TIKIMANIA</a><a href="https://www.geckozsouthseaarts.com/">Gecko</a><a href="https://eekumbookum.com/about-us">Eekum Bookum</a></p></div>
+    <div class="card carver"><span class="badge">Option two</span><h3>Fiji master carvers</h3><p class="role">Best for story</p><p>Create <b>The Tropics Ancestors Project</b>. Commission Fijian carvers through resort cultural centers, village networks or a dedicated field producer.</p><p>Each donor receives the story of the carving, certificate of origin, photo documentation and dedication plaque.</p><p>This feels more authentic than ordinary container decor and creates a powerful grand opening story.</p><p class="price">Custom budget required</p><p class="source"><a href="https://www.plantationisland.com/activity/woodcarving/">Plantation Island woodcarving</a><a href="https://www.fiji.travel/">Tourism Fiji</a></p></div>
+    <div class="card carver"><span class="badge">Option three</span><h3>Bali and Java production</h3><p class="role">Best for scale</p><p>Bali and Java can produce large quantities of hand carved resort art. This is the practical source for volume pieces, garden markers, palapa details and lower tier sponsored tikis.</p><p>Suggested use: produce the 50 piece village collection with two or three hero pieces by United States or Fijian master carvers, then use Bali or Java for supporting pieces.</p><p class="price">Often under $5,000 landed for many large pieces</p><p class="source"><a href="https://www.exbali.com/wood_carving/tiki_gods.htm">Export Bali</a><a href="https://www.balifurnish.com/woodcarving/woodcarvingsfrombali-index.html">Maya Bali Wood Crafts</a><a href="https://galileobalicraft.com/home/">Galileo Bali Crafts</a></p></div>
+  </div>
+</section>
+<section id="plaques" class="wrap">
+  <div class="sectionTitle"><h2>Plaque language and luxury execution</h2><p class="lead">The plaque should feel like a museum marker at a resort, not a fundraising sticker. Use bronze, lava stone, hardwood posts, uplighting and QR story links.</p></div>
+  <div class="plaqueRow">
+    <div class="plaque"><div class="smallCap">Historic Tropics Collection</div><div class="plaqueName">Tiki Number Seven</div><div>Preserved by<br>The Johnston Family</div><div class="smallCap" style="margin-top:14px">Original 1964 Collection</div></div>
+    <div class="plaque dark"><div class="smallCap">Founders of the Village</div><div class="plaqueName">The Gunilla Guardian</div><div>Commissioned for<br>The Tropics Legacy Campaign</div><div class="smallCap" style="margin-top:14px">Palm Springs</div></div>
+    <div class="plaque"><div class="smallCap">Wellness Legacy District</div><div class="plaqueName">The Wellness Garden</div><div>Made possible by<br>Dr. Jane Smith</div><div class="smallCap" style="margin-top:14px">Mind Body Spirit</div></div>
+  </div>
+  <div class="card" style="margin-top:24px"><h3>Outside plaque references</h3><p>For execution, request outdoor bronze or stainless steel donor recognition samples from museum, garden, university, hospital and performing arts projects. Exterior recognition specialists show named space plaques, outdoor donor walls and bronze plaques designed to survive sun, rain and guest traffic.</p><p class="source"><a href="https://pdgdesign.net/donor-recognition-gallery/exterior-recognition">PDG exterior recognition gallery</a><a href="https://www.rcbdonorrecognition.com/cast-bronze-plaques-exterior-donor-recognition">RCB cast bronze plaques</a><a href="https://globalrecognition.com/outdoor-recognition-memorials/">Global Recognition outdoor memorials</a><a href="https://www.larksigns.com/memorial-signs-and-donor-plaques">Lark Signs donor plaques</a></p></div>
+</section>
+<section class="wrap">
+  <div class="card cocktail"><span class="badge">House cocktail</span><h2>The 1964 Tropics</h2><p class="lead">A permanent house cocktail that never changes. It becomes part of the ritual, the donor story and the custom mug program.</p><div class="recipe"><p>Aged rum<br>Fresh lime<br>Passion fruit<br>Pineapple<br>Falernum<br>Aromatic bitters<br>Mint and orchid garnish</p><p>Serve in a custom Caliente Tropics mug. Give each major donor a numbered Founder mug designed by a recognized tiki ceramic artist. This creates a collectible object tied to the campaign.</p></div></div>
+</section>
+<section class="wrap">
+  <div class="sectionTitle"><h2>Recommended structure</h2><p class="lead">Keep the original tikis untouched as the Historic Tropics Collection, then build new revenue around stewardship, named districts and new commissioned carvings.</p></div>
+  <div class="grid3">
+    <div class="card"><h3>Original Tiki Stewardship</h3><p>$750,000 to $1,500,000 total sponsorship rights while keeping ownership of every tiki.</p></div>
+    <div class="card"><h3>Named Districts</h3><p>Wellness, Pool Club, Gardens, Event Lawn and Bar opportunities at $250,000 to $1,000,000 plus.</p></div>
+    <div class="card"><h3>Legacy Tiki Collection</h3><p>25 to 50 new donor named carvings at $25,000 to $100,000 each.</p></div>
+  </div>
+</section>
+<section class="wrap" id="github">
+  <div class="card"><h2>GitHub asset setup</h2><p class="lead">Your current asset names are now wired into this HTML.</p><p>Keep using the assets folder. For cleaner long term maintenance, rename future files without spaces, such as tiki_01.png, tiki_02.png and pool_night.png. Spaces work, but clean file names are easier.</p><div class="code">assets/tiki statue and torches.png
+assets/tiki statue and signage.png
+assets/tiki statue 2.png
+assets/tiki statue 3.png
+assets/tiki statue 4.png
+assets/tike statue 7.png
+assets/hero_tiki</div></div>
+</section>
+</main>
+<footer class="footer"><div class="wrap"><h2>The Tropics Legacy Campaign</h2><p class="lead">A campaign built around heritage, hospitality, tiki art and permanent recognition.</p></div></footer>
+</body>
+</html>
